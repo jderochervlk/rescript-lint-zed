@@ -92,6 +92,25 @@ Replace the paths with your actual local paths:
 
 **Note:** Make sure your local language server is built before using it. For rescript-vscode, this typically means running the build command in that repository first.
 
+To test a local `rescript-lint` build before its npm package is published, add a
+separate binary override:
+
+```json
+{
+  "lsp": {
+    "rescript-lint": {
+      "binary": {
+        "path": "/absolute-path/to/rescript-lint",
+        "arguments": ["lsp", "--stdio"]
+      }
+    }
+  }
+}
+```
+
+The linter runs alongside `rescript-language-server`; it does not replace
+completion, navigation, or compiler diagnostics.
+
 ### Publishing Changes
 
 If you already have the published version of the extension installed, it will be uninstalled automatically when you install the dev extension. The Extensions page will indicate that the upstream extension is "Overridden by dev extension".
