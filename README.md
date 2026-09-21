@@ -8,6 +8,34 @@ This extension plugs in the following projects:
 - [@rescript/language-server](https://github.com/rescript-lang/rescript-vscode) LSP
 - [@jvlk/rescript-lint](https://github.com/jderochervlk/rescript-lint) diagnostics
 
+## Installation (Development Extension)
+
+This extension is not published in Zed's extension registry yet. For now, install
+it from this repository using Zed's **Install Dev Extension** command.
+
+1. Install [Zed](https://zed.dev) and [Rust via rustup](https://rustup.rs/).
+2. Clone this repository:
+
+   ```sh
+   git clone https://github.com/jderochervlk/rescript-lint-zed.git
+   ```
+
+3. In Zed, run `zed: install dev extension` from the command palette, or open the
+   Extensions page and click **Install Dev Extension**.
+4. Select the cloned `rescript-lint-zed` directory. Zed builds the extension
+   automatically.
+5. Until `@jvlk/rescript-lint` is published on npm, configure a local linter build
+   using the [local binary override](CONTRIBUTING.md#using-a-local-language-server-build).
+6. Open a ReScript project to use the extension.
+
+This dev extension currently uses the same ID as the official ReScript extension,
+so installing it overrides that extension. To update your development installation,
+run `git pull` in the cloned repository, then click **Reinstall** on the extension
+in Zed.
+
+See Zed's [development extension documentation](https://zed.dev/docs/extensions/developing-extensions)
+for more details.
+
 ## Settings
 
 ```json
