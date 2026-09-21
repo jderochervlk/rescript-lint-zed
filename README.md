@@ -24,9 +24,9 @@ it from this repository using Zed's **Install Dev Extension** command.
    Extensions page and click **Install Dev Extension**.
 4. Select the cloned `rescript-lint-zed` directory. Zed builds the extension
    automatically.
-5. Until `@jvlk/rescript-lint` is published on npm, configure a local linter build
-   using the [local binary override](CONTRIBUTING.md#using-a-local-language-server-build).
-6. Open a ReScript project to use the extension.
+5. Open a ReScript project to use the extension. Zed downloads
+   `@jvlk/rescript-lint@0.1.0-alpha.1` automatically when no local
+   `rescript-lint` executable is available.
 
 This dev extension currently uses the same ID as the official ReScript extension,
 so installing it overrides that extension. To update your development installation,
@@ -53,7 +53,7 @@ for more details.
     },
     "rescript-lint": {
       "settings": {
-        "version": "0.1.0-beta.1"
+        "version": "0.1.0-alpha.1"
       }
     }
   }
@@ -69,9 +69,13 @@ The `rescript-lint` server has an independent `version` setting for the
 The extension uses a `rescript-lint` executable from the worktree's `PATH` when
 available and otherwise installs the configured npm version.
 
-Until `@jvlk/rescript-lint` is published, use the local binary override in the
-[contribution guide](CONTRIBUTING.md#using-a-local-language-server-build) when
-testing the linter integration.
+The default linter package is `@jvlk/rescript-lint@0.1.0-alpha.1`. See the
+[contribution guide](CONTRIBUTING.md#using-a-local-language-server-build) to
+use a local linter build instead.
+
+This alpha requires Node.js 24 or newer and currently supports Linux glibc x64
+and ARM64 only. See the [linter package documentation](https://www.npmjs.com/package/@jvlk/rescript-lint)
+for current platform support.
 
 ## Developing
 

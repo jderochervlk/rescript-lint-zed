@@ -7,9 +7,9 @@ const RESCRIPT_SERVER_ID: &str = "rescript-language-server";
 const RESCRIPT_SERVER_PATH: &str = "node_modules/@rescript/language-server/out/cli.js";
 const RESCRIPT_PACKAGE_NAME: &str = "@rescript/language-server";
 const LINTER_SERVER_ID: &str = "rescript-lint";
-const LINTER_SERVER_PATH: &str = "node_modules/@jvlk/rescript-lint/bin/rescript-lint.mjs";
+const LINTER_SERVER_PATH: &str = "node_modules/@jvlk/rescript-lint/bin/rescript-lint.cjs";
 const LINTER_PACKAGE_NAME: &str = "@jvlk/rescript-lint";
-const LINTER_DEFAULT_VERSION: &str = "0.1.0-beta.1";
+const LINTER_DEFAULT_VERSION: &str = "0.1.0-alpha.1";
 const LINTER_BINARY_NAME: &str = "rescript-lint";
 
 struct ReScriptExtension {
