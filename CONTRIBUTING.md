@@ -92,8 +92,7 @@ Replace the paths with your actual local paths:
 
 **Note:** Make sure your local language server is built before using it. For rescript-vscode, this typically means running the build command in that repository first.
 
-To test a local `rescript-lint` build before its npm package is published, add a
-separate binary override:
+To test a local `rescript-lint` build, add a separate binary override:
 
 ```json
 {
